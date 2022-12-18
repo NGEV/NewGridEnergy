@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Grid Energy</title>
+    <style>
+      body {
+        color: black;
+        background-color: LightGray;
+        font-family: Arial, sans-serif;
+      }
+      a {
+        color: gray;
+      }
+      a:hover {
+        color: black;
+      }
+      header {
+        background-color: #CCCCCC;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      header img {
+        width: 200px;
+        height: 200px;
+      }
+      h1 {
+        margin: 0;
+      }
+      nav {
+        display: flex;
+      }
+      nav .tab {
+        background-color: #CCCCCC;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-right: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s;
+      }
+      nav .tab:hover {
+        background-color: #BBBBBB;
+      }
+      footer {
+        background-color: #CCCCCC;
+        color: black;
+        text-align: center;
+        padding: 20px;
+      }
+      .hidden {
+        display: none;
+      }
+      .page-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      form label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      form input, form textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid #CCCCCC;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      form input:focus, form textarea:focus {
+        border-color: #BBBBBB;
+      }
+      form input[type="submit"] {
+        background-color: #CCCCCC;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+      }
+      form input[type="submit"]:hover {
+        background-color: #BBBBBB;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#Home"><img src="https://i.imgur.com/km7pyh0s.png" alt="New Grid Energy logo" /></a>
+      <h1>Welcome to New Grid Energy</h1>
+    </header>
+    <nav>
+      <a href="#Home" onclick="openTab('Home')" class="tab">Home</a>
+      <a href="#AboutUs" onclick="openTab('AboutUs')" class="tab">About Us</a>
+     
+      <a href="#Projects" onclick="openTab('Projects')" class="tab">Projects</a>
+      <a href="#ContactUs" onclick="openTab('ContactUs')" class="tab">Contact Us</a>
+    </nav>
+
+    <div id="Home" class="page-content tab">
+      <h2>Home</h2>
+      <p>Welcome to the homepage of New Grid Energy. We are a company that specialized in building energy infrastructure in Somalia. Our mission is to bring reliable and sustainable energy solutions to communities across the country.</p>
+    </div>
+    <div id="AboutUs" class="page-content tab">
+      <h2>About Us</h2>
+      <p>New Grid Energy was founded in 2015 by a group of entrepreneurs who saw a need for reliable energy infrastructure in Somalia. Since then, we have completed numerous projects and have become a leader in the industry.</p>
+    </div>
+    <div id="Projects" class="page-content tab">
+      <h2>Projects</h2>
+      <p>Take a look at some of the projects we have completed in the past:</p>
+    </div>
+    <div id="ContactUs" class="page-content tab">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us by filling out the form below:</p>
+    </div>
+
+    <footer>
+      <p>Copyright New Grid Energy 2021</p>
+    </footer>
+
+    <script>
+      function openTab(tabName) {
+        // hide all tabs
+        var tabs = document.getElementsByClassName("page-content");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+        }
+
+        // show the selected tab
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
